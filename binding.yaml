@@ -11,3 +11,4 @@ subjects:
 - kind: User
   namespace: hemang-namespace
   name: <User Principal Name>
+/* When you are using AD group, you have to write Group and replace UPN with group object ID */
