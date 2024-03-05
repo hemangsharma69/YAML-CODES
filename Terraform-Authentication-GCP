@@ -1,0 +1,20 @@
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+      version = "5.19.0"
+    }
+  }
+}
+
+provider "google" {
+    project = "premium-axis-369008"
+    region = "us-central1"
+    zone = "us-central1-a"
+    credentials = "keys.json"
+}
+
+resource "google_storage_bucket" "st" {
+  name = "demost"
+  location = "us-central1"
+}
