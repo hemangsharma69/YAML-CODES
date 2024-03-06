@@ -39,3 +39,27 @@ rules:
 - apiGroups: ["coordination.k8s.io"]
   resources: ["leases"]
   verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+
+
+
+Here's an explanation of each `apiGroups` in layman's terms:
+
+1. "":This refers to the core Kubernetes API group. It includes fundamental resources like pods, services, secrets, and configmaps. Think of it as the basic building blocks of your applications running on Kubernetes.
+
+2. "apps": This API group contains resources related to managing higher-level application components, such as deployments, replicasets, and statefulsets. It's used when you want to deploy and manage your applications on Kubernetes.
+
+3. "batch": This group is specifically for managing batch processing workloads, such as one-off jobs or scheduled jobs (cronjobs). It's used when you have tasks that need to be run at specific times or intervals.
+
+4. "extensions": Previously used for third-party extensions, this group contains resources like daemonsets, ingresses, and network policies. It's used for more advanced networking and deployment configurations.
+
+5. "policy": This group includes resources related to enforcing policies within your Kubernetes cluster, such as pod disruption budgets and pod security policies. It's used for ensuring certain policies are followed regarding application behavior and security.
+
+6. "rbac.authorization.k8s.io": This group is for managing Kubernetes Role-Based Access Control (RBAC) resources, such as roles and role bindings. It's used for controlling who can access and perform actions on Kubernetes resources within your cluster.
+
+7. "storage.k8s.io": This group contains resources related to storage management in Kubernetes, such as storage classes and volume attachments. It's used when you want to configure storage for your applications running on Kubernetes.
+
+8. "autoscaling": This group is for managing horizontal pod autoscalers, which automatically adjust the number of pods in a replication controller, deployment, replica set, or stateful set based on observed CPU utilization or other metrics. It's used for automatically scaling your applications based on demand.
+
+9. "coordination.k8s.io": This group includes resources like leases, which are used to coordinate actions between different parts of the system. It's used for coordinating tasks or resources in a distributed environment.
+
+Each of these `apiGroups` represents a different aspect or feature set of Kubernetes, and understanding them helps in effectively managing and deploying applications on Kubernetes.
